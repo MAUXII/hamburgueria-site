@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar{
+    height: 1em;
+    width: 0.5em;
+}
+
+::-webkit-scrollbar-track{
+    background: #F22248;
+    
+    
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 100vw;
+    background:linear-gradient(179.17deg, hsla(0, 0%, 100%, 0.105) 0.72%, #F2CB05 305.55%); 
+    
+}
+
+
+body{
+    font-family: 'Inter';
+    color: #E2E2E2;
+}
+
+main{
+    height: 100vw;
+    max-height: 100vh;
+    width: 100%;
+    background-image: url("/images/BACKGROUND.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+a{
+    text-decoration: none;
+    color: #E2E2E2;
+    font-style: normal;
+    font-weight: 1000;
+    line-height: 39px;
+}
+
+a:hover{
+    color: rgb(228, 50, 5);
+    transition: 1s;
+    
+}
+
+.linha{
+    width: 80px;
+height: 0px;
+border-radius: 20px;
+border: 3px solid #F22248;
+}
+
+.linha2{
+    width: 257.81px;
+height: 4.54px;
+left: 1149.22px;
+top: 355.51px;
+
+background: #F22248;
+border-radius: 30px;
+}
+
+nav{
+
+    padding-top: 67px;
+    display: flex;
+    align-items: center;    
+    justify-content: space-around;
+
+}
+
+ul.nav-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   list-style: none;
+}
+
+.nav-list li{
+    padding-left: 37px;
+    font-size: 32px;
+    
+}
+
+.titulo{
+    padding-top: 150px;
+
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter";
+    color: #E2E2E2;
+    font-size: 72px;
+    text-align: center;
+}
+
+button{
+    color: #E2E2E2;
+}
+
+.botao-main{
+    width: 589px;
+    height: 81px;
+    background: linear-gradient(179.17deg, #e43354 0.72%, #F2CB05 305.55%);
+border-radius: 15px;
+border: none;
+cursor: pointer;
+}
+
+
+
+button:hover{
+    color: #ccb792;
+    transition: 1s;
+}
+
+#about{
+    display: flex;
+    height: 100vw;
+    max-height: 100vh;
+    width: 100%;
+    background-image: url(/images/BACKGROUND\ 2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.quem-somos{
+    padding: 45px;
+    margin: 45px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+.quem-somos p {
+    display: flex;
+    padding-top: 30px;
+    gap: 35px;
+}
+
+.quem-somos p.texto2 {
+    text-align: right;
+}
+
+
+.image-about{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* <section class="infinito"> */
+section.infinito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 80px 0 80px 0;
+    background-color: rgb(0, 0, 0);
+    background-image: url(/images/BACKGROUND\ 2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+  }
+  /* <div class="titulo"> */
+  section.infinito .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 0 0 30px 0;
+    z-index: 2;
+  }
+  section.infinito .titulo h2 {
+    font-family: 'montserrat-black';
+    font-size: clamp(2.5rem, 1vw, 4rem);
+    color: var(--cor-branco);
+  }
+  section.infinito .titulo h2 span {
+    color: var(--cor-principal);
+  }
+  section.infinito .titulo p {
+    font-family: 'montserrat-medium';
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    color: var(--cor-branco);
+    line-height: 1.5;
+    margin: 10px 0 0 0;
+  }
+  /* <div class="slide"> */
+  section.infinito .slide {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+  }
+  section.infinito .slide .imagens {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    animation: scroll 60s linear infinite;
+    width: calc(280px * 16);
+  }
+  section.infinito .slide .imagens .imagem {
+    width: 270px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    margin: 0 10px 0 0;
+  }
+  /* Animação que faz ficar rodando infinitamente */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-280px * 11));
+      /* o número 8 representa a quantidade de imagens que tem no slide, se o seu slide tiver 5 itens por exemplo, coloque 5 no lugar do 8 */
+    }
+  }
+  /* <img class="efeito"> */
+  section.infinito img.efeito {
+    position: absolute;
+    bottom: -800px;
+    left: 100px;
+    width: 1300px;
+    opacity: 0.2;
+    z-index: 1;
+    animation: rodandoEfeito 30s linear infinite;
+  }
+  @keyframes rodandoEfeito {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  /* Mudanças no código quando chegar em 1000px (tablet e celular) */
+  @media screen and (max-width: 1000px) {
+    section.infinito {
+      padding: 50px 0 50px 0;
+    }
+    section.infinito .titulo {
+      padding: 0 20px 30px 20px;
+    }
+    /* <img class="efeito"> */
+    section.infinito img.efeito {
+      bottom: -200px;
+      left: -200px;
+      width: 1000px;
+    }
+  }
+  .formulario{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vw;
+    max-height: 100vh;
+    width: 100%;
+    background: linear-gradient(180.8deg, #251417 -33.97%, #060504 99.31%);
+    }
+
+.formulario .titulo2{
+    font-size: 32px;
+}
+
+    fieldset{
+        border: none;
+        justify-content: center;
+       align-items: center;
+    }
+
+.selecionar{
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        padding: 10px;
+        width: 502.67px;
+        height: 45px;
+        border-radius: 5px;
+
+    }
+
+    textarea{
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        padding: 10px;
+        width: 482px;
+        height: 85px;
+        border-radius: 5px;
+        resize: none;
+
+    }
+
+    fieldset input{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        padding: 10px;
+        width: 480px;
+        height: 45px;
+        border-radius: 5px;
+    }
+
+    #botao{
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        padding: 10px;
+        width: 502px;
+        height: 45px;
+        border-radius: 5px;
+    }
+
+    #botao:hover{
+        background-color: #e43354;
+        color: #E2E2E2;
+        transition: 1s;
+    }
+
+    html{
+        scroll-behavior: smooth
+    }
